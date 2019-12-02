@@ -1,4 +1,5 @@
 """
+Works in a LIFO structure
 Implementing a STACK Data Structure
 """
 

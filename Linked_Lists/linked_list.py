@@ -57,6 +57,60 @@ class LinkedList():
         new_node.next = prev_node.next
         prev_node.next = new_node
 
+    def delete_node(self, data):
+        """
+        Case 1: Node to be deleted is head
+        """
+        current_node = self.head
+        if current_node and current_node.data == data:
+            self.head = current_node.next
+            current_node = None
+            return
+        """
+        Case 2: Node to be deleted is not head
+        """
+        prev = None
+        while current_node and current_node.data != data:
+            prev = current_node
+            current_node = current_node.next
+        if current_node is None:
+            return
+        prev.next = current_node.next
+        current_node = None
+        # current_node = Node(data)
+
+    """
+    Deleting a node at a given position
+        : Assume elements in the list are unique
+    """
+    def delete_node_at_pos(self, pos):
+        current_node = self.head
+        if pos == 0:
+            self.head = current_node.next
+            current_node = None
+            return
+
+        prev = None
+        count = 1
+        if current_node and count != pos:
+            prev = current_node
+            current_node = current_node.next
+            count += 1
+        if current_node is None:
+            """
+            position given is greater than the number of elements
+            """
+            return
+        prev.next = current_node.next
+        current_node = None
+
+    def reverse_nodes(self):
+        prev = None
+        cur = self.head
+        
+
+        
+
 
 
 llist = LinkedList()
@@ -64,5 +118,6 @@ llist.append("A")
 llist.append("B")
 llist.append("C")
 llist.append("D")
-llist.insert_after_node(llist.head.next, "E")
+llist.delete_node("C")
+# llist.insert_after_node(llist.head.next, "E")
 llist.print_list()

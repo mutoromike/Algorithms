@@ -36,10 +36,10 @@ from functools import lru_cache
 def fib(i):
     if type(i) != int:
         raise TypeError("i must be a positive integer")
-    if i < 1:
-        raise ValueError("i mudt be a positive integer")
-    if i == 1:
-        return 1
+    if i < 0:
+        raise ValueError("i must be a positive integer")
+    if i == 0 or i == 1:
+        return i
     elif i == 2:
         return 1
     elif i>2:

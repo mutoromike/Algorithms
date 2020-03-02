@@ -1,8 +1,9 @@
 """
 Fibonacci without memoization
 """
-
+mem_cache = {}
 def fibonacci(i):
+    if 
     if (i == 0):
         return 0
     elif (i == 1):

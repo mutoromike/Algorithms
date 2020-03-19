@@ -3,9 +3,9 @@ cached_data = {}
 
 def solution(A):
     if type(A) != list:
-        return
+        return 0
     if A == []:
-        return
+        return 0
     # value = A.count(n)%2
     for n in A:
         if n in cached_data:
@@ -19,4 +19,4 @@ def solution(A):
         # print(cached_data[n])
     return
 
-print(solution(range(1, 202)))
+print(solution([2,2,3,3,4]))

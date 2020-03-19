@@ -44,4 +44,4 @@ def is_parens_balanced(parens_string):
     else:
         return False
 
-print(is_parens_balanced("{([])}"))
+print(is_parens_balanced("{([]])}"))

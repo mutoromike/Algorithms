@@ -19,4 +19,11 @@ def solution(A):
         # print(cached_data[n])
     return
 
+
+# try large list
+# l=[]
+# for i in range(0, 1000000):
+#     l.append(i)
+# print(solution(l))
+
 print(solution([2,2,3,3,4]))

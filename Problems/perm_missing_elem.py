@@ -43,10 +43,9 @@ def solution(a):
     max_ = max(a)
     i = 1
     while i <= max_:
-        print("we are here")
         if data.get(i) == None:
             return i
         i += 1
     return 0
 
-print(solution([1]))
+print(solution([2,3,1,5]))

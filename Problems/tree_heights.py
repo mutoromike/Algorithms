@@ -11,8 +11,6 @@ def min_tree_cuts(n):
         i = 1
     if n[-1] >= n[-2]:
         j = j-1
-    elements = []
-    elements1 = []
 
     while i <= len(n) or j >= 0:
 
@@ -31,10 +29,9 @@ def min_tree_cuts(n):
     return min(count, count1)
 
 
-
-
-
-
+m = [[2,3,7],
+     [6,7,0],
+     [9,1,5]]
 
 
 
@@ -59,3 +56,6 @@ def dfs(row, col, m, depth, visited=set()):
   )
   visited.remove((row,col))
   return (m[row][col] * (10**depth)) + rest
+
+
+solution(m)

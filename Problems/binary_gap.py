@@ -45,13 +45,13 @@ def solution(A=[], K=0):
         i = A.pop()
         A.insert(0, i)
         K -= 1
-    if K > 0:
-        return solution(A, K)
+    # if K > 0:
+    #     return solution(A, K)
     return A
 
 
 
-def get_odd():
+print(binary_gap(529))
     
 
 

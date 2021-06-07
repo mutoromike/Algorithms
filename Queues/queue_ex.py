@@ -18,9 +18,17 @@ who_is_next(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 7230702951) == 
 
 """
 
+# def who_is_next(names, r):
+#     for num in range(r):
+#         name = names.pop(0)
+#         names.extend([name, name])
+#         if num == r-1:
+#             return name
+
 def who_is_next(names, r):
-    for num in range(r):
-        name = names.pop(0)
-        names.extend([name, name])
-        if num == r-1:
-            return name
+    while r > 5:
+        r = (r - 4) // 2
+    return names[(r-1)]
+
+print(who_is_next(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 52))
+

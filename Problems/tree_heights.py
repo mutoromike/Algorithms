@@ -54,8 +54,9 @@ def dfs(row, col, m, depth, visited=set()):
     dfs(row, col-1, m, depth-1, visited),
     dfs(row, col+1, m, depth-1, visited)
   )
+  print(rest)
   visited.remove((row,col))
   return (m[row][col] * (10**depth)) + rest
 
 
-solution(m)
+print(solution(m))

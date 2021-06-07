@@ -104,9 +104,9 @@ class LinkedList():
         prev.next = current_node.next
         current_node = None
 
-    def reverse_nodes(self):
-        prev = None
-        cur = self.head
+    # def reverse_nodes(self):
+    #     prev = None
+    #     cur = self.head
         
 
         
@@ -121,3 +121,69 @@ llist.append("D")
 llist.delete_node("C")
 # llist.insert_after_node(llist.head.next, "E")
 llist.print_list()
+
+
+
+
+
+
+"""
+New method for running linked list:
+
+this does append for O(1) instead of O(n)
+"""
+
+
+
+class Node():
+  def __init__(self, data):
+    self.data = data
+    self.next = None
+
+
+class LinkedList():
+  def __init__(self):
+    self.head = None
+    self.tail = None
+
+  def append(self, data):
+    cur = Node(data)
+
+    if self.head is None:
+      self.head = cur
+      self.tail = cur
+      return
+
+    self.tail.next = cur
+    self.tail = cur
+
+    return
+    
+  def get_list(self):
+    cur = self.head
+    li = []
+    while cur:
+      li.append(cur.data)
+      cur = cur.next
+    print(li)
+    return
+
+  def prepend(self, data):
+    cur = Node(data)
+
+    if self.head is None:
+      self.head = cur
+      return
+    
+    cur.next = self.head
+    self.head = cur
+    return
+
+
+c = LinkedList()
+c.append("a")
+c.append("b")
+c.append("c")
+c.append("d")
+c.prepend("we")
+c.get_list()

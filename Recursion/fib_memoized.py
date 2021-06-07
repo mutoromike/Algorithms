@@ -1,11 +1,16 @@
 """
+    Given a number N, return the index value of the 
+    fibonacci sequence, i.e. where the sequence is:
+"""
+
+
+"""
 Dynamic Programming Solution:
     Fibonacci with memoization: CACHING
 
 Solution 1:
     Implementing memoization explicitly
 """
-
 fibonacci_cache = {}
 
 def fibonacci(n):
@@ -13,17 +18,19 @@ def fibonacci(n):
     if n in fibonacci_cache:
         return fibonacci_cache[n]
     #  Compute n
-    if n==1:
-        value = 1
+    if n < 2:
+        value = n
     elif n == 2:
         value = 1
-    elif n > 2:
+    else:
         value = fibonacci(n-1) + fibonacci(n-2)
     fibonacci_cache[n] = value
     return value
 
-# for n in range(1, 10001):
-#     print(n, ":", fibonacci(n))
+
+# print(fibonacci(999))
+for n in range(1, 10001):
+    print(n, ":", fibonacci(n))
 
 """
 Solution 2:
@@ -46,5 +53,18 @@ def fib(i):
         return fib(i - 1) + fib(i - 2)
 
 
-for n in range(1, 10001):
-    print(n, ":", fib(n))
+# for n in range(1, 10000):
+#     print(n, ":", fib(n))
+
+
+# Without recursion
+
+def fibs(n):
+    li = [0,1]
+    i = 2
+    while i < n+1:
+        li.append(li[i-2] + li[i-1])
+        i += 1
+    return li[n]
+
+# print(fibs(100000))

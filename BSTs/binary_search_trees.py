@@ -47,7 +47,7 @@ class BST():
         elif data < cur_node.data and cur_node.left:
             return self._find(data, cur_node.left)
         
-        if data == cur_node.data:
+        elif data == cur_node.data:
             return True
 
 
@@ -61,4 +61,4 @@ bst.insert(7)
 bst.insert(6)
 bst.insert(10)
 
-print(bst.search(9))
+print(bst.search(23))

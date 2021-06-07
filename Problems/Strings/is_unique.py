@@ -26,26 +26,3 @@ def unique(s):
     return True
 
 print(unique("mime"))
-
-
-def isUniqueChars(s):
-    if len(s) > 128:
-        return False
-
-
-
-    c = 128
-    i = 0
-    while i < len(s): {
-        val= s[i]
-        if (char_set[val]) {//Already found this char in string
-            return false;
-9
-}
-char_set[val] = true;
-10
-11
-12
-13 }
-}
-r

@@ -5,9 +5,14 @@ name = "pypi"
 
 [packages]
 pandas = "*"
+natsort = "==3.3.0"
+xlrd = "*"
+openpyxl = "*"
+py-translate = "*"
+googletrans = "*"
 
 [dev-packages]
 pylint = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8.5"

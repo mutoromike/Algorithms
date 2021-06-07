@@ -3,13 +3,13 @@ Fibonacci without memoization
 """
 mem_cache = {}
 def fibonacci(i):
-    if 
-    if (i == 0):
-        return 0
-    elif (i == 1):
-        return 1
+    # if 
+    if i <= 1:
+        return i
     else:
         return fibonacci(i - 1) + fibonacci(i - 2)
 
-print(fibonacci(40))
-    
+def count(s): 
+    return fibonacci(s + 1)
+
+print(count(5))

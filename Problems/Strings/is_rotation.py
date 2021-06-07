@@ -1,5 +1,5 @@
 """
-Check if a string is a substring of another,
+Check if a string is a rotation of another,
 the method checking this should be called once!
 """
 
@@ -12,7 +12,6 @@ def is_rotation(s1, s2):
 
 
 def is_substring(s1, s2):
-    print("s1 is {} and s2 is {}".format(s1, s2))
     if (s2 in s1):
         return True
     return False

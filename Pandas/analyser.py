@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-data = pd.read_csv("new.csv", engine="python")
+data = pd.read_csv("check3.csv", engine="python")
 
 rate = pd.read_csv("rate.csv", engine="python")
 
@@ -18,15 +18,16 @@ for k, v in rate_data.items():
             new_dict[val][v] = k
 # print(new_dict)
 # print(data.to_dict('index'))
-
+count = 1
 for i, row in data.iterrows():
-    if int(row['March Deduction']) == 0:
+    print(">>>>>>>>", f"{count} {row['Deduction']}")
+    if int(row['Deduction']) == 0:
         val = 0
-    
+    count+=1
     data_d = new_dict[row['FAMILY']]
     # print(row['FAMILY'])
     # print(data_d)
-    value = row['March Deduction']
+    value = row['Deduction']
     # print(value)
     if value in data_d.keys():
         val = data_d[value]

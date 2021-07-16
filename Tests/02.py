@@ -49,7 +49,7 @@ def get_num(s):
         return 1
     while c > 0:
         if c%2 == 0:
-            c = c/2
+            c = int(c)//2
             num += 1
         else:
             c -= 1

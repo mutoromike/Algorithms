@@ -10,6 +10,8 @@ xlrd = "*"
 openpyxl = "*"
 py-translate = "*"
 googletrans = "*"
+pypdf2 = "*"
+tabula-py = "*"
 
 [dev-packages]
 pylint = "*"

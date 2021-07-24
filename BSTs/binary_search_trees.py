@@ -61,4 +61,4 @@ bst.insert(7)
 bst.insert(6)
 bst.insert(10)
 
-print(bst.search(23))
+print(bst.search(2))

@@ -1,8 +1,11 @@
+# O(nlog(n)) - Time
+# O(n) - Space
+
 def mergeOverlappingIntervals(intervals):
     # Write your code here.
 	intervals = sorted(intervals, key=lambda x: x[0])
 	final = []
-	for i, interval in enumerate(intervals):
+	for interval in intervals:
 		if not final:
 			final.append(interval)
 		else:

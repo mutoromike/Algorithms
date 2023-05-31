@@ -1,4 +1,3 @@
-
 """
 Python:Lambda Map
 
@@ -12,10 +11,18 @@ example: input array = [[-1, -2, 1, 2, 3], [4, -5], [6, 7, 8, 9]]
 remove all elements less than or equal to 0
 square all elements
 """
+c = "asasasmmmma"
 
 
 def lambdaMap(arr):
-    result = list(map(lambda row: list(map(lambda num: num ** 2, filter(lambda num: num > 0, row))), arr))
+    result = list(
+        map(
+            lambda row: list(
+                map(lambda num: num**2, filter(lambda num: num > 0, row))
+            ),
+            arr,
+        )
+    )
     return result
 
     """
@@ -57,7 +64,9 @@ def log(descriptor):
             descriptor.write(log)
             result = func(*args, **kwargs)
             return result
+
         return wrapper
+
     return decorator
 
 
@@ -71,4 +80,5 @@ def reverse_args(func):
     def wrapper(*args, **kwargs):
         reversed_args = args[::-1]
         return func(*reversed_args, **kwargs)
+
     return wrapper
